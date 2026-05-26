@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.1) transparent;
+  }
+  body {
+    @apply bg-midnight text-white antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display',
+      'SF Pro Text', 'Helvetica Neue', sans-serif;
+  }
+}
