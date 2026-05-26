@@ -15,6 +15,10 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 API_KEY = os.environ["SWARMS_API_KEY"]
 
 # ---------------------------------------------------------------------------

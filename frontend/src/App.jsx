@@ -62,7 +62,7 @@ function BackgroundOrbs() {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
       <motion.div
-        className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full opacity-[0.12]"
+        className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full opacity-[0.18]"
         style={{ background: 'radial-gradient(circle at 30% 30%, #FBBF24, transparent 70%)' }}
         animate={{
           x: [0, 80, -40, 60, 0],
@@ -72,7 +72,7 @@ function BackgroundOrbs() {
         transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
-        className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full opacity-[0.10]"
+        className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full opacity-[0.16]"
         style={{ background: 'radial-gradient(circle at 70% 30%, #06B6D4, transparent 70%)' }}
         animate={{
           x: [0, -70, 50, -30, 0],
@@ -82,7 +82,7 @@ function BackgroundOrbs() {
         transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
-        className="absolute top-1/3 -right-20 w-[350px] h-[350px] rounded-full opacity-[0.08]"
+        className="absolute top-1/3 -right-20 w-[350px] h-[350px] rounded-full opacity-[0.12]"
         style={{ background: 'radial-gradient(circle at 40% 40%, #FBBF24, transparent 70%)' }}
         animate={{
           x: [0, 40, -60, 20, 0],
@@ -92,7 +92,7 @@ function BackgroundOrbs() {
         transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
-        className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] rounded-full opacity-[0.06]"
+        className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] rounded-full opacity-[0.10]"
         style={{ background: 'radial-gradient(circle at 60% 60%, #06B6D4, transparent 70%)' }}
         animate={{
           x: [0, -50, 30, -20, 0],
@@ -112,7 +112,7 @@ function GlassPanel({ children, className = '', hoverLift = true, style }) {
       whileHover={hoverLift ? { y: -4, transition: { type: 'spring', stiffness: 300, damping: 20 } } : {}}
       style={style}
     >
-      <div className="bg-black/20 backdrop-blur-3xl rounded-2xl h-full">
+      <div className="bg-black/[0.03] backdrop-blur-3xl rounded-2xl h-full">
         {children}
       </div>
     </motion.div>
@@ -179,7 +179,7 @@ function AgentPill({ agent, index }) {
       transition={{ delay: 0.1 * index, type: 'spring', stiffness: 120, damping: 14 }}
       className="bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-[1px] rounded-xl"
     >
-      <div className="bg-black/30 backdrop-blur-3xl rounded-xl px-4 py-3 min-w-[140px]">
+      <div className="bg-black/[0.03] backdrop-blur-3xl rounded-xl px-4 py-3 min-w-[140px]">
         <div className="flex items-center gap-2">
           <span className="text-sm">{agent.icon}</span>
           <span className="text-white/90 text-xs font-semibold">{agent.name}</span>
@@ -334,7 +334,7 @@ function App() {
                     The Ultra-Fast Alpha Provisioner
                   </p>
                 </div>
-                <div className="hidden sm:flex items-center gap-1.5 ml-4 px-3 py-1 rounded-full bg-white/5 border border-white/5">
+                <div className="hidden sm:flex items-center gap-1.5 ml-4 px-3 py-1 rounded-full bg-white/[0.02] border border-white/[0.05]">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                   <span className="text-green-400/80 text-[10px] font-mono">All Systems Nominal</span>
                 </div>
@@ -344,7 +344,7 @@ function App() {
                   <p className="text-white/30 text-[9px] font-mono">{currentTime.toLocaleTimeString()}</p>
                   <p className="text-white/20 text-[9px] font-mono">UTC</p>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/5">
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.02] border border-white/[0.05]">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
                   <span className="text-cyan-400/80 text-[10px] font-mono">v0.1.0</span>
                 </div>
